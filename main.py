@@ -46,3 +46,4 @@ if __name__ == '__main__':
    print(f"Obtained CFUs: {round(CFU_CURRENT, 2)} / Pending CFUs: {pendingCFUs}")
    PENDING_GOAL = round(((((CFU_CURRENT + pendingCFUs) * GOAL) - (CURRENT * CFU_CURRENT)) / pendingCFUs), 2) if pendingCFUs != 0 else 0
    print(f"Pending exams goal: {f'{CURRENT} (already reached goal, maintain or improve)' if CURRENT > GOAL else ('impossible, greater than 30 :(' if PENDING_GOAL >= 30 else ('impossible, no more pending CFUs :(' if pendingCFUs <= 0 else PENDING_GOAL))}")
+   # TUTTO SU UNA LINEA PERCHÉ SI, FATTI GLI AFFARI TUOI
