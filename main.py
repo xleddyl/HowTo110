@@ -42,7 +42,7 @@ if __name__ == '__main__':
    CURRENT, CFU_CURRENT = computeAvg(finalGrades)
    _, pendingCFUs = computeAvg(pendingGrades)
    print(f"Exams avg: {round(CURRENT, 2)}")
-   print(f"Goal (assuming {thesisPoints} points for Thesis): {round(GOAL, 2)}")
-   print(f"CFU obtained: {round(CFU_CURRENT, 2)} / Pending CFUs: {pendingCFUs}")
-   PENDING_GOAL = ((((CFU_CURRENT + pendingCFUs) * GOAL) - (CURRENT * CFU_CURRENT)) / pendingCFUs) if pendingCFUs != 0 else 0
-   print(f"Pending exams goal: {round(PENDING_GOAL, 2) if PENDING_GOAL <= 30 and pendingCFUs > 0 else 'impossible, greater than 30 or no more pending CFUs :('}")
+   print(f"Goal: {round(GOAL, 2)} (assuming {thesisPoints} points for Thesis)")
+   print(f"Obtained CFUs: {round(CFU_CURRENT, 2)} / Pending CFUs: {pendingCFUs}")
+   PENDING_GOAL = round(((((CFU_CURRENT + pendingCFUs) * GOAL) - (CURRENT * CFU_CURRENT)) / pendingCFUs), 2) if pendingCFUs != 0 else 0
+   print(f"Pending exams goal: {f'{CURRENT} (already reached goal, maintain or improve)' if CURRENT > GOAL else ('impossible, greater than 30 :(' if PENDING_GOAL >= 30 else ('impossible, no more pending CFUs :(' if pendingCFUs <= 0 else PENDING_GOAL))}")
