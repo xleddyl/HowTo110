@@ -1,0 +1,24 @@
+# Insert here all of your exams in the format <GRADE>;<CFU> (example -> 29;8).
+# If GRADE < 18 or GRADE < 30 then it's automatically interpreted as not taken yet.
+# New lines that start with # will be interpreated as comments.
+# Since 30L does not count for the graduation mark write it as 30.
+# Exams with the status "passed" does not count, skip them.
+# Insert the maximum points obtainable with the thesis as T;<MAXPOINTS> (example -> T;7).
+#
+# example:
+# T;7
+# 21;6
+# 27;8
+# 29;6
+# 0;10
+# 0;6
+# 0;6
+# 0;8
+# 0;6
+# 0;6
+# 0;6
+# 0;6
+# 0;6
+# 0;10
+#
+# insert below your grades:
